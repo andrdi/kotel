@@ -1,0 +1,31 @@
+# Configuration file for Gammu SMS Daemon
+
+# Gammu library configuration, see gammurc(5)
+
+[gammu]
+
+port = /dev/ttyUSB1
+model =
+connection = at
+synchronizetime = yes
+logformat = text
+
+# SMSD configuration, see gammu-smsdrc(5)
+[smsd]
+service = files
+logfile = stdout
+PIN = 0000
+# Increase for debugging information
+debuglevel = 0
+
+# Paths where messages are stored
+inboxpath = /var/spool/gammu/inbox/
+outboxpath = /var/spool/gammu/outbox/
+sentsmspath = /var/spool/gammu/sent/
+errorsmspath = /var/spool/gammu/error/
+
+# Кодировка сообщений
+ OutboxFormat = unicode
+ TransmitFormat = auto
+
+RunOnReceive = /opt/sms/sms2mail.sh
