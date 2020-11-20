@@ -1,0 +1,8 @@
+- name: Set Timezone
+  file:
+    src: /usr/share/zoneinfo/Asia/Yekaterinburg
+    dest: /etc/localtime
+    owner: root
+    group: root
+    state: link
+  become: yes

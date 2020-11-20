@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+
+  roles:
+    - apt-update-upgrade
+    - set-hostname
+    - set-timezone
+    - install-common-software
+    #- user-management
+    #- easyrsa

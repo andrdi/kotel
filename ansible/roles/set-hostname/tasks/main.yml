@@ -1,0 +1,12 @@
+---
+- name: Set hostname
+  hostname:
+    name: "{{ host_name }}"
+  become: yes
+
+- name: Add a line to /etc/hosts
+  lineinfile:
+    path: /etc/hosts
+    line: 127.0.0.1 {{ host_name }}
+    create: yes
+  become: yes

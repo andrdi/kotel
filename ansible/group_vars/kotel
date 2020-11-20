@@ -1,0 +1,11 @@
+---
+ansible_python_interpreter: /usr/bin/python3
+host_name: kotel-manager
+
+easyrsa_cn: "kotel.local"
+easyrsa_req_country: "RU"
+easyrsa_req_province: "Chelyabinskaya obl"
+easyrsa_req_city: "Magnitogorsk"
+easyrsa_req_org: "Kotel"
+easyrsa_req_email: "kotel@andrdi.com"
+easyrsa_req_ou: "IT"

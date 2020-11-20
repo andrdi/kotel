@@ -1,0 +1,7 @@
+---
+
+- name: Install common packages
+  package:
+    name: "{{ common_packages }}"
+    state: present
+  become: yes
