@@ -3,6 +3,11 @@ variable "availability_zone" {
   default = "eu-central-1"
 }
 
+variable profile {
+  description = "Profile"
+  default = "AWS-user"
+}
+
 variable "access_key" {
   type = string
   default = "my-access-key"
