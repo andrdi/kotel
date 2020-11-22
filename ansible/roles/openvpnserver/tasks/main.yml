@@ -1,0 +1,25 @@
+---
+
+- name: Install openvpn packages
+  package:
+    name: "{{ openvpn_packages }}"
+    state: present
+  become: yes
+
+- name: Template a conf file
+  template:
+    src: server.conf.j2
+    dest: /etc/openvpn/server.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - restart openvpn server
+  become: true
+
+- name: Start openvpn@server service
+  systemd:
+    name: openvpn@server
+    state: started
+    enabled: yes
+  become: true

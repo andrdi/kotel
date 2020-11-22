@@ -1,0 +1,24 @@
+---
+
+easyrsa_packages:
+  - easy-rsa
+
+easyrsa_current_release_url: 'https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz'
+easyrsa_path: "/etc/easyrsa"
+
+easyrsa_dn: "cn_only"
+easyrsa_cn: "changeMe"
+easyrsa_req_country: "US"
+easyrsa_req_province: "California"
+easyrsa_req_city: "San Francisco"
+easyrsa_req_org: "Copyleft Certificate Co"
+easyrsa_req_email: "me@example.net"
+easyrsa_req_ou: "My Organizational Unit"
+
+easyrsa_keysize: 2048
+easyrsa_digest: "sha256"
+easyrsa_ca_expire: 3650
+easyrsa_key_expire: 3650
+
+easyrsa_clients:
+  - name: client1

@@ -8,4 +8,5 @@
     - set-timezone
     - install-common-software
     #- user-management
-    #- easyrsa
+    - easyrsa
+    - openvpnserver

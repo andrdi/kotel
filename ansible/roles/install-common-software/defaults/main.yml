@@ -2,3 +2,4 @@
 common_packages:
   - mc
   - vim
+  - net-tools

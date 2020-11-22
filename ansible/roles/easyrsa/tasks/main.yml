@@ -1,0 +1,16 @@
+---
+
+- name: Install easyrsa packages
+  package:
+    name: "{{ easyrsa_packages }}"
+    state: present
+  become: yes
+
+- name: Copy vars configuration file
+  template:
+    src: vars.j2
+    dest: "/usr/share/easy-rsa/vars"
+    owner: root
+    group: root
+    mode: 0644
+  become: yes

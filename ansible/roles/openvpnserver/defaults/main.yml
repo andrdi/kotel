@@ -1,0 +1,8 @@
+---
+openvpn_packages:
+  - openvpn
+
+service_user: 'openvpn'
+service_group: 'openvpn'
+proto: 'udp'
+ovpnport: '1194'
