@@ -15,7 +15,7 @@ crl-verify /etc/openvpn/server/crl.pem
 # Network Configuration - Internal network
 # Redirect all Connection through OpenVPN Server
 server 10.10.1.0 255.255.255.0
-ifconfig-pool-persist ipp.txt
+ifconfig-pool-persist /etc/openvpn/server/ipp.txt
 push "redirect-gateway def1"
 
 # Using the DNS from google
